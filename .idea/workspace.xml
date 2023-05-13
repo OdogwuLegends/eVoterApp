@@ -5,7 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eee28cf2-9942-4aa5-8a65-8644f2065346" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/dto/request/CreateElectionRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/dto/request/PartyRegistrationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/dto/response/CreateElectionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/dto/response/DeletePartyResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/dto/response/DeleteVoterResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/dto/response/PartyRegistrationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/exceptions/PartyRegistrationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/exceptions/VoterRegistrationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/mapper/ModelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/models/Catergory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/repositories/BvasElectionRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/services/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/services/BvasElectionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/services/BvasPartyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/services/ElectionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/services/PartyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/africa/semicolon/IdealBvas/services/BvasElectionServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/africa/semicolon/IdealBvas/services/BvasPartyServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/Utils/AppUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/Utils/AppUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/models/Election.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/models/Election.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/models/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/models/Party.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/repositories/BvasPartyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/repositories/BvasPartyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/repositories/PartyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/repositories/PartyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/services/BvasVoterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/services/BvasVoterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/services/VoterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/africa/semicolon/IdealBvas/services/VoterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/africa/semicolon/IdealBvas/services/BvasVoterServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/africa/semicolon/IdealBvas/services/BvasVoterServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +43,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -34,29 +60,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "go.import.settings.migrated": "true",
+    "last_directory_selection": "C:/Users/USER/IdeaProjects/IdealBVAS/src/main/java/africa/semicolon/IdealBvas/services",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="africa.semicolon.IdealBvas.services" />
+      <recent name="africa.semicolon.IdealBvas.exceptions" />
+      <recent name="africa.semicolon.IdealBvas.dto.response" />
+      <recent name="africa.semicolon.IdealBvas.dto.request" />
       <recent name="africa.semicolon.IdealBvas.models" />
+      <recent name="africa.semicolon.IdealBvas.services" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -66,9 +96,8 @@
       <recent name="africa.semicolon.IdealBvas.repositories" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BvasVoterService">
-    <configuration name="BvasVoterService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="africa.semicolon.IdealBvas.services.BvasVoterService" />
+  <component name="RunManager" selected="JUnit.BvasAdminServiceTest">
+    <configuration name="BvasAdminServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IdealBVAS" />
       <extension name="coverage">
         <pattern>
@@ -76,65 +105,71 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Trial" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="africa.semicolon.IdealBvas.Utils.Trial" />
-      <module name="IdealBVAS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="africa.semicolon.IdealBvas.Utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BvasAdminRepositoryTest.testToFindAdminById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IdealBVAS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="africa.semicolon.IdealBvas.repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="africa.semicolon.IdealBvas.repositories" />
-      <option name="MAIN_CLASS_NAME" value="africa.semicolon.IdealBvas.repositories.BvasAdminRepositoryTest" />
-      <option name="METHOD_NAME" value="testToFindAdminById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BvasPartyRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="IdealBVAS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="africa.semicolon.IdealBvas.repositories.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="africa.semicolon.IdealBvas.repositories" />
-      <option name="MAIN_CLASS_NAME" value="africa.semicolon.IdealBvas.repositories.BvasPartyRepositoryTest" />
+      <option name="PACKAGE_NAME" value="africa.semicolon.IdealBvas.services" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.IdealBvas.services.BvasAdminServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BvasPartyRepositoryTest.testToDeletePartyById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BvasAdminServiceTest.testToRegisterAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="IdealBVAS" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="africa.semicolon.IdealBvas.repositories.*" />
+          <option name="PATTERN" value="africa.semicolon.IdealBvas.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="africa.semicolon.IdealBvas.repositories" />
-      <option name="MAIN_CLASS_NAME" value="africa.semicolon.IdealBvas.repositories.BvasPartyRepositoryTest" />
-      <option name="METHOD_NAME" value="testToDeletePartyById" />
+      <option name="PACKAGE_NAME" value="africa.semicolon.IdealBvas.services" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.IdealBvas.services.BvasAdminServiceTest" />
+      <option name="METHOD_NAME" value="testToRegisterAdmin" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BvasPartyServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IdealBVAS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.semicolon.IdealBvas.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.semicolon.IdealBvas.services" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.IdealBvas.services.BvasPartyServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BvasPartyServiceTest.testToDeleteParty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IdealBVAS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.semicolon.IdealBvas.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.semicolon.IdealBvas.services" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.IdealBvas.services.BvasPartyServiceTest" />
+      <option name="METHOD_NAME" value="testToDeleteParty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BvasPartyServiceTest.testToFindPartyByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IdealBVAS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="africa.semicolon.IdealBvas.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="africa.semicolon.IdealBvas.services" />
+      <option name="MAIN_CLASS_NAME" value="africa.semicolon.IdealBvas.services.BvasPartyServiceTest" />
+      <option name="METHOD_NAME" value="testToFindPartyByName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BvasVoterService" />
-        <item itemvalue="Application.Trial" />
-        <item itemvalue="JUnit.BvasAdminRepositoryTest.testToFindAdminById" />
-        <item itemvalue="JUnit.BvasPartyRepositoryTest.testToDeletePartyById" />
-        <item itemvalue="JUnit.BvasPartyRepositoryTest" />
+        <item itemvalue="JUnit.BvasAdminServiceTest" />
+        <item itemvalue="JUnit.BvasAdminServiceTest.testToRegisterAdmin" />
+        <item itemvalue="JUnit.BvasPartyServiceTest" />
+        <item itemvalue="JUnit.BvasPartyServiceTest.testToFindPartyByName" />
+        <item itemvalue="JUnit.BvasPartyServiceTest.testToDeleteParty" />
       </list>
     </recent_temporary>
   </component>

@@ -6,6 +6,7 @@ import africa.semicolon.IdealBvas.models.UserInformation;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class BvasPartyRepository implements PartyRepository{
     List<Party> politicalParties = new ArrayList<>();
@@ -16,6 +17,7 @@ public class BvasPartyRepository implements PartyRepository{
     @Override
     public Party save(Party party) {
         party.setId(AppUtils.generateId());
+        party.setName("PDP");
         boolean isPartyWithUserInformation = party.getUserInformation()!=null;
         if(isPartyWithUserInformation) saveUserInformation(party);
         politicalParties.add(party);
@@ -44,6 +46,14 @@ public class BvasPartyRepository implements PartyRepository{
             foundParty.setUserInformation(userInformation);
         }
         return foundParty;
+    }
+
+    @Override
+    public Party findByName(String name) {
+        for(Party party : politicalParties){
+            if (Objects.equals(party.getName(),name)) return party;
+        }
+        return null;
     }
 
     @Override

@@ -12,4 +12,5 @@ import lombok.NoArgsConstructor;
 public class Party {
     private String id;
     private UserInformation userInformation;
+    private String name;
 }

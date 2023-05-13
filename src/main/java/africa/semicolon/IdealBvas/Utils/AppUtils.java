@@ -10,10 +10,11 @@ public class AppUtils {
     public final static int ZERO = BigInteger.valueOf(0).intValue();
     public final static int FIVE = BigInteger.valueOf(5).intValue();
     public final static int EIGHT = BigInteger.valueOf(8).intValue();
+    public final static int ONE = BigInteger.valueOf(1).intValue();
 
     public static String generateId(){
         currentId += 1;
-        
+
         int generatedId = currentId;
         return String.valueOf(generatedId);
     }
@@ -21,8 +22,7 @@ public class AppUtils {
        userInformationJoinTable.put(userId,userInformationId);
     }
     public static String getUserInformationId(String userId){
-        String userInformationId = userInformationJoinTable.get(userId);
-        return userInformationId;
+        return userInformationJoinTable.get(userId);
     }
 
 }

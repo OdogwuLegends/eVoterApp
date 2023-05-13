@@ -1,43 +1,55 @@
 package africa.semicolon.IdealBvas.services;
 
 import africa.semicolon.IdealBvas.dto.request.VoterRegistrationRequest;
+import africa.semicolon.IdealBvas.dto.response.DeleteVoterResponse;
 import africa.semicolon.IdealBvas.dto.response.VoterRegistrationResponse;
+import africa.semicolon.IdealBvas.exceptions.VoterRegistrationException;
+import africa.semicolon.IdealBvas.mapper.ModelMapper;
 import africa.semicolon.IdealBvas.models.Address;
 import africa.semicolon.IdealBvas.models.Gender;
 import africa.semicolon.IdealBvas.models.UserInformation;
 import africa.semicolon.IdealBvas.models.Voter;
+import africa.semicolon.IdealBvas.repositories.BvasVoterRepository;
+import africa.semicolon.IdealBvas.repositories.VoterRepository;
 
-import java.math.BigInteger;
+import java.util.List;
 import java.util.UUID;
 
 import static africa.semicolon.IdealBvas.Utils.AppUtils.*;
 
 public class BvasVoterService implements VoterService{
+    private final VoterRepository voterRepository = new BvasVoterRepository();
 
     @Override
-    public VoterRegistrationResponse register(VoterRegistrationRequest voterRegistrationRequest) {
+    public VoterRegistrationResponse register(VoterRegistrationRequest voterRegistrationRequest) throws VoterRegistrationException {
+        Voter voter = ModelMapper.map(voterRegistrationRequest);
 
-        Address address = new Address();
-        address.setTown(voterRegistrationRequest.getTown());
-        address.setState(voterRegistrationRequest.getState());
-        address.setStreet(voterRegistrationRequest.getStreet());
-        address.setHouseNumber(voterRegistrationRequest.getHouseNumber());
-        address.setLocalGovernmentArea(voterRegistrationRequest.getLga());
-        Gender gender = Gender.valueOf(voterRegistrationRequest.getGender());
+        String VIN = generateVoterIdentificationNumber();
+        voter.setVoterIdentificationNumber(VIN);
+        Voter savedVoter = voterRepository.save(voter);
 
-        UserInformation userInformation = new UserInformation();
-        userInformation.setPassword(voterRegistrationRequest.getPassword());
-        userInformation.setUserName(voterRegistrationRequest.getUserName());
-
-        Voter voter  = new Voter();
-        voter.setName(voterRegistrationRequest.getName());
-        voter.setAge(voterRegistrationRequest.getAge());
-        voter.setAddress(address);
-        voter.setGender(gender);
-        voter.setUserInformation(userInformation);
+        if(savedVoter == null) throw new VoterRegistrationException("Voter registration failed");
 
         VoterRegistrationResponse voterRegistrationResponse = new VoterRegistrationResponse();
-        return null;
+        voterRegistrationResponse.setMessage("Registration Successful. May your count.");
+        voterRegistrationResponse.setVoterIdentificationNumber(savedVoter.getVoterIdentificationNumber());
+        return voterRegistrationResponse;
+    }
+
+    @Override
+    public Voter getUserById(String id) {
+        return voterRepository.findById(id);
+    }
+
+    @Override
+    public List<Voter> getAllVoters() {
+        return voterRepository.findAll();
+    }
+
+    @Override
+    public DeleteVoterResponse deleteById(String id) {
+        voterRepository.deleteById(id);
+        return DeleteVoterResponse.builder().message("Voter deleted").build();
     }
 
 
@@ -65,10 +77,6 @@ public class BvasVoterService implements VoterService{
             if(randomUuid.charAt(i) != '-') result += randomUuid.charAt(i);
         }
         return result;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(generateVoterIdentificationNumber());
     }
     private static String generateUUID() {
         UUID randomUuid = UUID.randomUUID();
